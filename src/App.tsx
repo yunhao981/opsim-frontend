@@ -1,25 +1,20 @@
 import type { Component } from 'solid-js';
+import { Route, Routes } from '@solidjs/router';
 
-import logo from './logo.svg';
-import styles from './App.module.css';
+import Template from './Components/Template';
+import Login from './Components/Login';
 
 const App: Component = () => {
+
+
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
+    <div>
+      <h1>OPSIM</h1>
+      <Routes>
+        <Route path="/template" component={Template} />
+        <Route path="/login" component={Login} />
+        <Route path="/Artifacts" component={Artifact} />
+      </Routes>
     </div>
   );
 };
