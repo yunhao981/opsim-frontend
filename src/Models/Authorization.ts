@@ -3,4 +3,4 @@ class Authorization {
 
 }
 
-export deafult Authorization;
+export default Authorization;
